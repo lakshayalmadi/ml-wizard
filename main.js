@@ -27,11 +27,17 @@ define([
             set_text(`#This cell is for data preprocessing
             df=pd.read_csv('Data.csv')
             x=df.iloc[:,:-1].values #dependent_variables
-            y=df.iloc[:,3].values #independent_variables
+            y=df.iloc[:,len(df.coloumns)-1].values #independent_variables
+
+            #handling missing data
+            from sklearn.preprocessing import Imputer
+            imputer=Imputer(missing_values='NaN', strategy='mean', axis=0)
+            imputer=imputer.fit(x[:,:])
+            x[:,:]=imputer.transform(x[:,:])
             
             # Splitting the dataset into Training Set and Test set
             from sklearn.cross_validation import train_test_split
-            X_train,X_test, y_train, y_test = train_test_split(X,y,test_size=0.2,random_state=0)
+            X_train,X_test, y_train, y_test = train_test_split(X,y,test_size = ,random_state=0)
             
             # Feature Scaling
             from sklearn.preprocessing import StandardScaler
