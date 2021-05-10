@@ -1,0 +1,8 @@
+Type: Jupyter Notebook Extension
+Name: ML-Preset-Files
+Description: This extension automatically loads the required initial code for importing libraries and data preprocessing and gives a template for basic classification and regression algorithms.
+Link: readme.md
+Main: main.js
+Compatibility: 3.x, 4.x, 5.x, 6.x
+
+Parameters: none
