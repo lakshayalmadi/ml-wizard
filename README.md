@@ -11,7 +11,7 @@ If you don't have jupyter notebook extensions added you have to run the command:
 
 You will see a nbextension tab being added to jupyter notebook.
 <br>
-<img src="https://github.com/lakshayalmadi/ml-wizard/blob/master/images/image1.jpg" width=600>
+<img src="https://github.com/lakshayalmadi/ml-wizard/blob/master/images/image1.JPG" width=600>
 
 ## Adding the extension to your list of extensions
 Download the extension  and then save the folder in :
