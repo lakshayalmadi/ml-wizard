@@ -55,6 +55,11 @@ X_train,X_test, y_train, y_test = train_test_split(x,y,test_size = ,random_state
         var regression_cell=function(){
             Jupyter.notebook.insert_cell_above('code').
             set_text(`#This cell is for regression algorithms
+#from sklearn.linear_model import LinearRegression
+regressor=LinearRegression()
+regressor.fit(x_train, y_train)
+y_pred=regressor.predict(x_test)
+
 
 `);
         };
