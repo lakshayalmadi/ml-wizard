@@ -55,17 +55,46 @@ X_train,X_test, y_train, y_test = train_test_split(x,y,test_size = ,random_state
         var regression_cell=function(){
             Jupyter.notebook.insert_cell_above('code').
             set_text(`#This cell is for regression algorithms
+
 #from sklearn.linear_model import LinearRegression
-regressor=LinearRegression()
-regressor.fit(x_train, y_train)
-y_pred=regressor.predict(x_test)
+#from sklearn.preprocessing import PolynomialFeatures
 
+#for simple linear regression and multiple linear regression
+#regressor=LinearRegression()
+#regressor.fit(x_train, y_train)
+#y_pred=regressor.predict(x_test)
 
+#for polynomial linear regression
+#poly = PolynomialFeatures(degree='num')
+#x1 = poly.fit_transform(x)
+#lin_reg2=LinearRegression()
+#lin_reg2.fit(x1,y)
+#lin_reg2.predict(poly.fit_transform([['value]]))
+
+#svr
+#from sklearn.svm import SVR
+#regressor = SVR(kernel = 'rbf')
+#regressor.fit(x, y)
+#y_pred=regressor.predict([['value']])
+
+#decision tree
+#from sklearn.tree import DecisionTreeRegressor
+#regressor=DecisionTreeRegressor(random_state=0)
+#regressor.fit(x,y)
+#y_pred=regressor.predict([['value']])
+
+#random forest
+#from sklearn.ensemble import RandomForestRegressor
+#regressor=RandomForestRegressor(n_estimators=1000, random_state=0)
+#regressor.fit(x,y.ravel())
+#y_pred=regressor.predict([['value']])
 `);
         };
         var classification_cell=function(){
             Jupyter.notebook.insert_cell_above('code').
             set_text(`#This cell is for classification algorithms
+
+
 
 `);
         }
