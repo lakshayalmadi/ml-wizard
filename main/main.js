@@ -8,22 +8,21 @@ define([
         Jupyter.notebook.insert_cell_above('code').
         // Define default cell here
         set_text(`# Standard data science libraries
-                    import pandas as pd
-                    import numpy as np
-                    from scipy import stats
-                    import featuretools as ft
-                    # Visualization
-                    import matplotlib.pyplot as plt
-                    import seaborn as sns
-                    # Display all cell outputs
-                    from IPython.core.interactiveshell import InteractiveShell
-                    InteractiveShell.ast_node_interactivity = 'all'
-                    `);
+import pandas as pd
+import numpy as np
+from scipy import stats
+# Visualization
+import matplotlib.pyplot as plt
+import seaborn as sns
+# Display all cell outputs
+from IPython.core.interactiveshell import InteractiveShell
+InteractiveShell.ast_node_interactivity = 'all'
+`);
         Jupyter.notebook.select_prev();
         //Jupyter.notebook.execute_cell_and_select_below();
         };
         var data_preprocessing_cell=function(){
-            Jupyter.notebook.insert_cell_above('code').
+            Jupyter.notebook.insert_cell_below('code').
             set_text(`#This cell is for data preprocessing
             df=pd.read_csv('Data.csv')
             x=df.iloc[:,:-1].values #dependent_variables
@@ -61,9 +60,10 @@ define([
         // Add a default cell if there are no cells
         if (Jupyter.notebook.get_cells().length===1){
             libraries_cell();
-        }
-        else if(Jupyter.notebook.get_cells().length===2){
             data_preprocessing_cell();
+        }
+        else if(Jupyter.notebook.get_cells().length===1){
+            
         }
         defaultCellButton();
     }
