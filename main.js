@@ -42,7 +42,7 @@ from sklearn.preprocessing import LabelEncoder,OneHotEncoder
 #x=ohe.fit_transform(x).toarray()
             
 # Splitting the dataset into Training Set and Test set
-from sklearn.cross_validation import train_test_split
+from sklearn.model_selection import train_test_split
 X_train,X_test, y_train, y_test = train_test_split(x,y,test_size = ,random_state=0)
             
 # Feature Scaling
